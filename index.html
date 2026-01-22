@@ -243,6 +243,124 @@
         .social-icon { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; transition: 0.3s; margin-right: 10px; text-decoration: none; }
         .social-icon:hover { background: var(--primary); color: white; }
 
+   
+    /* --- PREMIUM MOBILE OPTIMIZATION --- */
+@media (max-width: 768px) {
+    /* ১. বডি স্পেসিং এবং ফন্ট সাইজ */
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* ২. হিরো সেকশন ছোট স্ক্রিনে আরও ক্লিন দেখাবে */
+    .hero {
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem !important;
+        letter-spacing: -1px;
+    }
+
+    /* ৩. টাইমার বক্স - মোবাইলে ৪টি বক্স পাশাপাশি সুন্দরভাবে ফিট হবে */
+    .timer-box {
+        min-width: 70px;
+        padding: 10px;
+        border-radius: 12px;
+    }
+    .timer-val {
+        font-size: 1.4rem;
+    }
+
+    /* ৪. গ্লাস কার্ড মোবাইলে আরও স্লিক দেখাবে */
+    .glass-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* ৫. মোবাইল মেনু এনিমেশন এবং স্টাইল */
+    .navbar-collapse {
+        border-radius: 0 0 30px 30px;
+        height: auto !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .nav-link {
+        font-size: 1.1rem !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* ৬. পেমেন্ট বক্স মোবাইলে রিডেবল করা */
+    .payment-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    
+    .payment-box .copy-btn {
+        width: 100%;
+    }
+
+    /* ৭. প্রাইজ সেকশন - মোবাইলে চ্যাম্পিয়ন কার্ডটি উপরে থাকবে */
+    #prizes .row {
+        display: flex;
+        flex-direction: column;
+    }
+    #prizes .order-md-2 {
+        order: 1 !important; /* Champion Card first on mobile */
+        margin-bottom: 20px;
+    }
+    #prizes .order-md-1 { order: 2 !important; }
+    #prizes .order-md-3 { order: 3 !important; }
+
+    /* ৮. বাটন সাইজ অপ্টিমাইজেশন */
+    .btn-glow, .btn-outline-glow {
+        width: 100%; /* মোবাইলে বাটনগুলো পুরো স্ক্রিন জুড়ে থাকবে */
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* ৯. সেকশন টাইটেল */
+    h2.display-4, h2.display-5 {
+        font-size: 1.8rem !important;
+    }
+
+    /* ১০. পার্টনার লোগো বক্স মোবাইলে ছোট করা */
+    .partner-card {
+        height: 80px;
+        padding: 10px 15px;
+    }
+    .partner-logo-box {
+        width: 40px; height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* --- অতিরিক্ত এনিমেশন এবং গ্লো ইফেক্ট --- */
+.glass-card {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(30, 41, 59, 0.3);
+}
+
+.phase-card {
+    transition: transform 0.3s ease;
+}
+
+.phase-card:active {
+    transform: scale(0.98); /* মোবাইলে টাচ করলে হালকা দেবে যাবে */
+}
+    
+    
+    
     </style>
 </head>
 <body>
